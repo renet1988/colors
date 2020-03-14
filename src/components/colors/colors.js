@@ -20,7 +20,6 @@ class Colors extends React.Component {
                 return Math.random() - 0.5;
             }
         );
-        console.log('Colors:: ', newArray);
         this.setState({
             list: newArray
         });
@@ -28,14 +27,12 @@ class Colors extends React.Component {
 
     rotateColors = () => {
         const { list } = this.state;
-        console.log('List: ', list);
         let first, rest;
         [first, ...rest] = list
         rest.push(first);
         this.setState({
             list: rest
         })
-        console.log('Rotate: ', rest);
     }
 
     render() {
